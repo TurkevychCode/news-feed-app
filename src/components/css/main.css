@@ -1,0 +1,6 @@
+@import "global.css";
+@import "/src/components/login/login.css";
+@import "/src/components/newsFeed/newsFeed.css";
+@import "/src/components/header/header.css";
+@import "/src/components/homeWindow/homeWindow.css";
+@import "/src/components/modalWindow/modalWindow.css";

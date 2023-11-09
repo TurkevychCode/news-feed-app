@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    max-width: 1440px;
+}
+
+:root {
+    --log-background: #ecf0f3;
+    --log-title: #1DA1F2;
+    --input-placeholder: gray;
+    --background-input: #ecf0f3;
+    --log-button-color: white;
+    --button-background: #1DA1F2;
+    --background-color-header: #3498db;
+    --header-title-color: white;
+    --background-color-header-button: #fff;
+    --color-header-button: #1d89ff;
+    --header-button-text-color: #164ca7;
+    --header-button-shine: #38ef7d;
+    --background-color-card: rgba(255, 255, 255, 0.45);
+    --add-button-background: rgba(255, 255, 255, 0.5);
+    --text-add-button-color:black;
+    --hover-color-text:#fff;
+    --background-color-button-add: black;
+    --background-modal-overlay: rgba(0, 0, 0, 0.5);
+    --background-modal: white;
+    --background-input-line:#bdc3c7;
+    --second-line-input: #1abc9c;
+    --background-color-submit: #22c8e5;
+}
