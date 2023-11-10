@@ -3,14 +3,12 @@ import {useContext, useEffect, useState} from "react";
 import Header from "../header/Header";
 import UsersContext from "../context/UserContext";
 
-export default function InfoCart() {
+export default function InfoCart({logOut}) {
     const location = useLocation();
     const postId = location.state?.postId;
     const [post, setPost] = useState(null);
     const navigate = useNavigate();
-
     const users = useContext(UsersContext);
-    console.log(users)
 
     useEffect(() => {
         const fetchData = async () => {
