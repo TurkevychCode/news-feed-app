@@ -11,8 +11,6 @@ export default function HomeWindow() {
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
 
-
-
     const handleLogin = (username) => {
         setLoggedInUser(username);
         localStorage.setItem('loggedInUser', username);
@@ -21,7 +19,6 @@ export default function HomeWindow() {
         setLoggedInUser(null);
         localStorage.removeItem('loggedInUser');
     };
-
     useEffect(() => {
         const savedUser = localStorage.getItem('loggedInUser');
         if (savedUser) {
@@ -39,29 +36,20 @@ export default function HomeWindow() {
             const posts = await fetchUsers();
             setUsers(posts)
         }
-
         getUsers()
     }, [])
     return (
         <UsersContext.Provider value={users}>
             <Router>
                 <Routes>
+                    <Route path="/login"
+                           element={loggedInUser ? <Navigate to="/news-feed"/> : <Login onLogin={handleLogin}/>}/>
                     <Route
-                        path="/login"
-                        element={loggedInUser ? <Navigate to="/news-feed"/> : <Login onLogin={handleLogin}/>}
-                    />
-                    <Route
-                        path="/news-feed"
-                        element={
-                            loggedInUser ? (
+                        path="/news-feed" element={loggedInUser ? (
                                 <NewsFeed loggedInUser={loggedInUser} users={users} logOut={handleLogout}
-                                          postsData={posts}/>) : (<Navigate to="/login"/>)}
-                    />
+                                          postsData={posts}/>) : (<Navigate to="/login"/>)}/>
                     <Route index element={<Navigate to="/login"/>}/>
-                    <Route
-                        path="/post/:id/info"
-                        element={<InfoCart/>}
-                    />
+                    <Route path="/post/:id/info" element={<InfoCart/>}/>
                 </Routes>
             </Router>
         </UsersContext.Provider>

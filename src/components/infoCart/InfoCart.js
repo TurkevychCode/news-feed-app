@@ -41,7 +41,6 @@ export default function InfoCart({logOut}) {
 
     return (
         <>
-            <Header/>
             <div className='infoCart'>
                 <div className='infoCart-block'>
                     {post && (
@@ -59,7 +58,8 @@ export default function InfoCart({logOut}) {
                         </div>
                     )}
                     <div className='infoCart-block-button'>
-                        <button className='infoCart-block-button-comebackButton' onClick={handleComeback}>Comeback</button>
+                        <button className='infoCart-block-button-comebackButton' onClick={handleComeback}>Back to home
+                        </button>
                         <button className='infoCart-block-button-deleteButton' onClick={handleDeletePost}>Delete news
                         </button>
                     </div>
