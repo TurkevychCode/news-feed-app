@@ -29,4 +29,7 @@
     --background-input-line:#bdc3c7;
     --second-line-input: #1abc9c;
     --background-color-submit: #22c8e5;
+    --color-text-button: white;
+    --background-color-delete-button: #a42828;
+    --background-color-comeBack-button: #35b537;
 }

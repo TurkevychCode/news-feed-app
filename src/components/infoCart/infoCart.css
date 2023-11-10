@@ -1,0 +1,69 @@
+.infoCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.infoCart-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 30px;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 40px;
+    box-shadow: black 2px 2px 12px 2px;
+}
+.infoCart-block-text{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoCart-block-text-title{
+    width: 400px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.infoCart-block-user{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.infoCart-block-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.infoCart-block-button-deleteButton{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--button-background);
+    color: var(--color-text-button);
+    font-size: 15px;
+    cursor: pointer;
+}
+.infoCart-block-button-deleteButton:hover{
+    transition: 0.5s;
+    background-color: var(--background-color-delete-button);
+}
+.infoCart-block-button-comebackButton{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--button-background);
+    color: var(--color-text-button);
+    font-size: 15px;
+    cursor: pointer;
+}
+.infoCart-block-button-comebackButton:hover{
+    transition: 0.5s;
+    background-color: var(--background-color-comeBack-button);
+}

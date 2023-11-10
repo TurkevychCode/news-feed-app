@@ -18,16 +18,13 @@ export default function ModalWindow({closeModal, users}) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                title,
-                description,
-                selectedUser,
+                title: title,
+                body:description,
+                userid:selectedUser,
             }),
         });
         console.log('Server response:', response)
-    }
-
-    function handleSelect(event) {
-        setSelectedUser(event.target.value)
+        closeModal();
     }
 
     return (
@@ -58,7 +55,7 @@ export default function ModalWindow({closeModal, users}) {
                 <p className='modal-overlay-modal-title'>User</p>
                 <select className='modal-overlay-modal-select'
                         value={selectedUser}
-                        onChange={handleSelect}>
+                        onChange={(e)=> setSelectedUser(e.target.value)}>
                     {
                         users.map((user, id) => (
                             <option key={id} className='modal-overlay-modal-select-option' value={user.id}>
